@@ -174,6 +174,7 @@
             this.Controls.Add(this.label1);
             this.Name = "PilaApp";
             this.Text = "PilaApp";
+            this.Load += new System.EventHandler(this.PilaApp_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

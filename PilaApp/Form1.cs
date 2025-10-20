@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PilaApp.Clases;
 
 namespace PilaApp
 {
     public partial class PilaApp : Form
     {
+        private Stack<Empleado> pilaEmpleados = new Stack<Empleado>();
         public PilaApp()
         {
             InitializeComponent();
@@ -23,6 +25,11 @@ namespace PilaApp
         }
 
         private void tbNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PilaApp_Load(object sender, EventArgs e)
         {
 
         }
