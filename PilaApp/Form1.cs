@@ -46,7 +46,57 @@ namespace PilaApp
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            
+            lblError.Text = "Error:"; 
+
+            if (string.IsNullOrWhiteSpace(tbNombre.Text) ||
+                string.IsNullOrWhiteSpace(tbApellido.Text) ||
+                string.IsNullOrWhiteSpace(tbCargos.Text) ||
+                string.IsNullOrWhiteSpace(tbSalario.Text))
+            {
+                lblError.Text = "Error: Todos los campos son obligatorios.";
+                return;
+            }
+
+            if (!decimal.TryParse(tbSalario.Text, out decimal salario))
+            {
+                lblError.Text = "Error: El salario debe ser un nuemrro válido.";
+                return;
+            }
+
+            Empleado nuevoEmpleado = new Empleado
+            {
+                Nombre = tbNombre.Text,
+                Apellido = tbApellido.Text,
+                Cargo = tbCargos.Text,
+                Salario = salario
+            };
+
+            pilaEmpleados.Push(nuevoEmpleado);
+
+            ActualizarListBox();
+
+            tbNombre.Clear();
+            tbApellido.Clear();
+            tbCargos.Clear();
+            tbSalario.Clear();
+            tbNombre.Focus();
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            lblError.Text = "Error:"; 
+
+            if (pilaEmpleados.Count == 0)
+            {
+                lblError.Text = "Error: La pila está vacía, no se puede eliminar.";
+                return;
+            }
+
+            Empleado empleadoEliminado = pilaEmpleados.Pop();
+            lblError.Text = $"Se eliminó a: {empleadoEliminado.NombreCompleto}";
+
+            ActualizarListBox();
         }
     }
 }
