@@ -19,6 +19,16 @@ namespace PilaApp
             InitializeComponent();
         }
 
+        private void ActualizarListBox()
+        {
+            lstPila.Items.Clear();
+
+           
+            foreach (Empleado emp in pilaEmpleados.ToArray())
+            {
+                lstPila.Items.Add($"{emp.NombreCompleto}, Cargo: {emp.Cargo}, Salario: {emp.Salario:C}");
+            }
+        }
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -32,6 +42,11 @@ namespace PilaApp
         private void PilaApp_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

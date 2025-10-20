@@ -39,7 +39,7 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnTope = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lstPila = new System.Windows.Forms.ListBox();
             this.lblError = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -117,6 +117,7 @@
             this.btnAgregar.TabIndex = 8;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnEliminar
             // 
@@ -136,14 +137,14 @@
             this.btnTope.Text = "Ver Tope";
             this.btnTope.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // lstPila
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(29, 219);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(403, 180);
-            this.listBox1.TabIndex = 11;
+            this.lstPila.FormattingEnabled = true;
+            this.lstPila.ItemHeight = 16;
+            this.lstPila.Location = new System.Drawing.Point(29, 219);
+            this.lstPila.Name = "lstPila";
+            this.lstPila.Size = new System.Drawing.Size(403, 180);
+            this.lstPila.TabIndex = 11;
             // 
             // lblError
             // 
@@ -160,7 +161,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblError);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.lstPila);
             this.Controls.Add(this.btnTope);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAgregar);
@@ -193,7 +194,7 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnTope;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lstPila;
         private System.Windows.Forms.Label lblError;
     }
 }
