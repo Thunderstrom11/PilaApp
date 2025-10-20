@@ -21,5 +21,10 @@ namespace PilaApp
         {
 
         }
+
+        private void tbNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

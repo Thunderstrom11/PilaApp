@@ -86,6 +86,7 @@
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(147, 22);
             this.tbNombre.TabIndex = 4;
+            this.tbNombre.TextChanged += new System.EventHandler(this.tbNombre_TextChanged);
             // 
             // tbApellido
             // 
