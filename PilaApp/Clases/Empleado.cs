@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace PilaApp.Clases
 {
-    internal class Empleado
+    public class Empleado
     {
+        public string Nombre { get; set; }
+        public string Apellido {  get; set; }
+        public string Cargo { get; set; }
+        public decimal Salario { get; set; }
+
+        public string NombreCompleto
+        {
+            get { return $"{Nombre} {Apellido}"; }
+        }
+
     }
 }
