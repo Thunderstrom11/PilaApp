@@ -137,6 +137,7 @@
             this.btnTope.TabIndex = 10;
             this.btnTope.Text = "Ver Tope";
             this.btnTope.UseVisualStyleBackColor = true;
+            this.btnTope.Click += new System.EventHandler(this.btnTope_Click);
             // 
             // lstPila
             // 

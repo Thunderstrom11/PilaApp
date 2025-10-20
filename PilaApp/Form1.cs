@@ -98,5 +98,20 @@ namespace PilaApp
 
             ActualizarListBox();
         }
+
+        private void btnTope_Click(object sender, EventArgs e)
+        {
+            lblError.Text = "Error:"; 
+
+            if (pilaEmpleados.Count == 0)
+            {
+                lblError.Text = "Error: La pila está vacía.";
+                return;
+            }
+
+            Empleado empleadoEnTope = pilaEmpleados.Peek();
+
+            lblError.Text = $"Elemento en el tope: {empleadoEnTope.NombreCompleto}";
+        }
     }
 }
